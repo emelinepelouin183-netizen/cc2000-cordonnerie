@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CC 2000 Cordonnerie Clés Multiservices - Mennecy</title>
+    <meta name="description" content="Cordonnier à Mennecy - CC 2000 Cordonnerie Clés Multiservices. 4 483 avis. Centre Commercial INTERMARCHÉ, 191 Rue Jean Cocteau, 91540 Mennecy.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #d32f2f;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #f57c00;
+        }
+
+        .stars {
+            color: #ffc107;
+            font-size: 1.5em;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #1976d2;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1565c0;
+            transform: translateY(-2px);
+        }
+
+        .btn-success {
+            background: #4caf50;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #f44336;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #d32f2f;
+            transform: translateY(-2px);
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-card h3 {
+            color: #1976d2;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .address {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .phone {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #1976d2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .services {
+            grid-column: span 2;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .service-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 4px solid #1976d2;
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            background: #e3f2fd;
+            transform: scale(1.05);
+        }
+
+        .service-icon {
+            font-size: 2.5em;
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+
+        .map-container {
+            grid-column: span 2;
+            height: 400px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .map-placeholder {
+            height: 100%;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .stat-item {
+            flex: 1;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #1976d2;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        .floating-action {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #1976d2;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(25, 118, 210, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .floating-action:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(25, 118, 210, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-shoe-prints"></i>
+                CC 2000 Cordonnerie Clés Multiservices
+            </div>
+            <div class="rating">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                4,483 avis
+            </div>
+            <div class="subtitle">Cordonnier à Mennecy</div>
+            
+            <div class="contact-buttons">
+                <a href="tel:0164986202" class="btn btn-primary">
+                    <i class="fas fa-phone"></i>
+                    Appeler
+                </a>
+                <a href="#" class="btn btn-success" onclick="share()">
+                    <i class="fas fa-share-alt"></i>
+                    Partager
+                </a>
+                <a href="#" class="btn btn-secondary" onclick="save()">
+                    <i class="fas fa-save"></i>
+                    Enregistrer
+                </a>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="info-card">
+                <h3><i class="fas fa-map-marker-alt"></i> Adresse</h3>
+                <div class="address">
+                    <i class="fas fa-building"></i>
+                    Centre Commercial INTERMARCHÉ<br>
+                    ZAC de Montvrain 2 R.N<br>
+                    191 Rue Jean Cocteau<br>
+                    91540 Mennecy
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=191+Rue+Jean+Cocteau,+91540+Mennecy" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-directions"></i>
+                    Itinéraire
+                </a>
+            </div>
+
+            <div class="info-card">
+                <h3><i class="fas fa-clock"></i> Contact</h3>
+                <div class="phone">
+                    <i class="fas fa-phone"></i>
+                    01 64 98 62 02
+                </div>
+                <p><strong>Horaires :</strong><br>
+                Lundi - Samedi : 9h00 - 19h00<br>
+                Dimanche : Fermé</p>
+            </div>
+
+            <div class="info-card services">
+                <h3><i class="fas fa-tools"></i> Nos Services</h3>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-icon"><i class="fas fa-shoe-prints"></i></div>
+                        <h4>Cordonnerie</h4>
+                        <p>Réparation de chaussures toutes marques</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon"><i class="fas fa-key"></i></div>
+                        <h4>Clés</h4>
+                        <p>Duplication et création de clés</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon"><i class="fas fa-cut"></i></div>
+                        <h4>Multiservices</h4>
+                        <p>Retouche vêtements, pressing</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon"><i class="fas fa-broom"></i></div>
+                        <h4>Nettoyage</h4>
+                        <p>Nettoyage chaussures & sacs</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card" style="grid-column: span 2;">
+                <h3><i class="fas fa-globe"></i> Localisation</h3>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt" style="font-size: 3em; margin-bottom: 10px; display: block;"></i>
+                        Cliquez pour ouvrir Google Maps
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">4,483</div>
+                <div class="stat-label">Avis clients</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Années d'expérience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Taux de satisfaction</div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 CC 2000 Cordonnerie Clés Multiservices. Tous droits réservés.</p>
+            <p>Centre Commercial INTERMARCHÉ, 191 Rue Jean Cocteau, 91540 Mennecy</p>
+        </footer>
+    </div>
+
+    <div class="floating-action" onclick="scrollToTop()" title="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Fonctions interactives
+        function share() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'CC 2000 Cordonnerie',
+                    text: 'Cordonnier à Mennecy - 4,483 avis',
+                    url: window.location.href
+                });
+            } else {
+                alert('Partage du lien : ' + window.location.href);
+            }
+        }
+
+        function save() {
+            // Simulation d'enregistrement
+            alert('Établi dans vos favoris ! ❤️');
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Appel automatique du téléphone sur mobile
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Ne rien faire de spécial, le navigateur gère l'appel
+            });
+        });
+
+        // Animation au scroll
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.info-card, .service-item');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Animation d'entrée
+        document.querySelectorAll('.info-card, .service-item').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+        });
+    </script>
+</body>
+</html>
